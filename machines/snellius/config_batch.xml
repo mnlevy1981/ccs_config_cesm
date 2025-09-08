@@ -1,0 +1,14 @@
+
+  <!-- snellius is SLURM -->
+  <batch_system type="slurm" MACH="snellius">
+    <batch_submit>sbatch</batch_submit>
+    <submit_args>
+      <argument> --time $JOB_WALLCLOCK_TIME </argument>
+      <argument> -p $JOB_QUEUE </argument>
+    </submit_args>
+    <queues>
+      <!-- Want case.st_archiver to run on staging and case.run to use rome. -->
+      <queue jobmin="1" jobmax="15">staging</queue>
+      <queue default="true" jobmin="16">rome</queue>
+    </queues>
+  </batch_system>
