@@ -8,7 +8,7 @@
     </submit_args>
     <queues>
       <!-- Want case.st_archiver to run on staging and case.run to use rome. -->
-      <queue jobmin="1" jobmax="15">staging</queue>
-      <queue default="true" jobmin="16">rome</queue>
+      <queue walltimemax="1:00:00" jobmin="1" jobmax="15">staging</queue>
+      <queue walltimemax="12:00:00" default="true" jobmin="16">rome</queue>
     </queues>
   </batch_system>

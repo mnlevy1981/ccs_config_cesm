@@ -58,6 +58,11 @@
         <tasks_per_node>1</tasks_per_node>
         <walltime>0:20:00</walltime>
       </runtime_parameters>
+      <runtime_parameters MACH="snellius">
+        <task_count>1</task_count>
+        <tasks_per_node>1</tasks_per_node>
+        <walltime>0:45:00</walltime>
+      </runtime_parameters>
     </job>
   </workflow_jobs>
 
